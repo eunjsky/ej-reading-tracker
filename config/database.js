@@ -1,16 +1,16 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/books", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-  // useCreateIndex: true
-});
-
-// mongoose.connect(process.env.DATABASE_URL, {
+// mongoose.connect("mongodb://localhost/books", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true
 //   // useCreateIndex: true
 // });
+
+mongoose.connect(process.env.DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+  // useCreateIndex: true
+});
 // // I need to npm i dotenv
 
 const db = mongoose.connection;
