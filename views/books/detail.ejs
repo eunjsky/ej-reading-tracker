@@ -1,0 +1,75 @@
+<%-include('../base/header')%>
+
+<body>
+    
+    <% if (typeof book !== 'undefined') { %>
+    <div class="wholebox">
+        <div class="headertext">
+        <h4>Book info</h4></div>
+        <div>Title: <%= book.title %></div>
+        <div>Author: <%= book.author %></div>
+        <div>Completed: <%= book.completed %></div>
+        <div>Rating: <%= book.rating %></div>
+        <div>Genre: <%= book.genre %></div>
+       
+        <div class="headertext"> Note: </div>
+    
+        <div>
+            <% book.myreview.forEach(function(other){ %>
+            
+            <div>User Name: <%= other.user %></div>
+            <div>Review: <%= other.review %><form action="/books/<%= other._id %>/delete/<%= book._id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button class="allbtn" type="submit">Delete</button></form></div>
+
+            <% }); %>
+        </div>
+        
+
+        <div class="headertext"> Other recommend: </div> 
+            <div>
+                <ul>
+                    <% recommend.forEach(function(rec){ %>
+                      <li>Title: <%= rec.title %> Author: <%= rec.author %>
+                        Genre: <%= rec.genre %> </li>
+                    <% }); %>
+                </ul>
+            </div>
+             
+        <div>
+                <button class="allbtn"><a href="/books/edit/<%= book.id %>">Edit Book info</a></button>
+                <button class="allbtn"><a href="/books/">Back to My Library</a></button>      
+        </div>
+
+    <div class="addreviewtext"><h4>Add a Rview</h4></div>
+    <form action="/books/<%= book._id %>" method="post">
+
+        <div class="form-div">
+            <form action="/books" method="POST">
+              <div class="form-group">
+                <label>User Name:</label>
+                <input type="text" name="user">   
+              </div>
+              
+                <div class="form-group">
+                <div class="review">
+                    <label class="pushtoright" for="review">Review:</label>
+                    </div>
+                  <div class="reviewtext">
+                  <textarea id="reviews" name="review" placeholder="Write review.." style="height:100px"></textarea>
+                </div>
+        
+                <button class="allbtn" type="submit">Submit</button>
+            
+         </form>
+         
+            <button class="allbtn"><a href="/books/<%= book._id %>/recommends/new">ADD Recommend BOOKS</a></button> 
+</div> 
+</div> 
+   <% }else {} %>
+
+</body>
+
+</html>
+
+

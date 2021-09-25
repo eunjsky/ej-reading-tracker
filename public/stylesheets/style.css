@@ -1,0 +1,135 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.mainnav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  background-color: #ffe8e5;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navul {
+  margin: 0;
+  padding: 0;
+  background-color: #ffe8e5;
+  width: 100%;
+  list-style-type: none;
+}
+
+.navli {
+  float: left;
+}
+
+.navbar {
+  color: #b86b77;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navli a:hover {
+  background-color: #f6cfca;
+  text-decoration: none;
+  color: black;
+}
+
+.navli-move {
+  margin: right;
+}
+
+.wholebox {
+  margin: 30px 15px 0 15px;
+}
+
+.smallbox {
+  display: flex;
+}
+
+.link {
+  margin: 5px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+}
+
+.link a {
+  text-decoration: none;
+  color: #cd5e77;
+}
+
+.link a:hover {
+  text-decoration: none;
+  color: #5f9ea0;
+}
+
+.allbtn {
+  background-color: #f6cfca;
+  border: none;
+  border-radius: 3px;
+  color: #cd5e77;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 5px 10px;
+  cursor: pointer;
+}
+
+.allbtn a {
+  text-decoration: none;
+  color: #cd5e77;
+}
+
+.allbtn:hover {
+  text-decoration: none;
+  background-color: #5f9ea0;
+  color: white;
+}
+
+.allbtn a:hover {
+  text-decoration: none;
+  background-color: #5f9ea0;
+  color: white;
+}
+
+.headertext {
+  color: #8a5767;
+}
+
+.addreviewtext {
+  color: #8a5767;
+  margin: 20px 0px 30px 0px;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.review {
+  float: left;
+}
+
+.pushtoright {
+  margin-right: 25px;
+}
+
+.pushtorightmore {
+  margin-right: 35px;
+}
+
+.pushtorightrecommend {
+  margin-right: 12px;
+}
+.pushtorightrecommends {
+  margin-right: 5px;
+}

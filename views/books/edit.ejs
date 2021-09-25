@@ -1,0 +1,42 @@
+<%-include('../base/header')%>
+<body>
+    <div class="wholebox">
+    <div class="headertext"><h3>Edit book info</h3></div>
+
+    <form action="/books/editBook/<%= book._id %>" method="post">
+        
+    <div class="form-group">
+      <label class="pushtorightmore">Title:</label>  <input id="inputForm" placeholder="<%= book.title %>" type="text" name="title"><br>
+    </div>
+
+    <div class="form-group">
+      <label class="pushtoright">Author:</label> <input id="inputForm" placeholder="<%=  book.author %>" type="text" name="author"><br>
+    </div>
+    
+    <div class="form-group">
+    <label>Completed:</label> <select name="completed">
+            <option value="YES">YES</option>
+            <option value="NO">NO</option>
+            <option value="READING">READING</option>
+          </select><br>
+    </div>
+
+    <div class="form-group">
+    <label class="pushtoright">Rating:</label> <input id="inputForm" placeholder="<%=  book.rating %>" type="text" name="rating"><br>
+    </div>
+
+    <div class="form-group">
+    <label class="pushtoright">Genre:</label> <input id="inputForm" placeholder="<%=  book.genre %>" type="text" name="genre"><br>
+    </div>
+    
+      <input class="allbtn" type="submit" value="EDIT">
+  </form>
+  <div class="link"><a href="/books/<%= book.id %>">BACK</a></div>  
+</div>
+
+
+
+ 
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<%-include('../base/header')%>
+<!-- add book -->
+<body>
+    <div class="wholebox">
+    <div class="headertext">
+    <h4>Add books to your library</h4>
+    </div>
+  <div class="form-div">
+    <form action="/books" method="POST">
+      <div class="form-group">
+        <label class="pushtorightmore">Title:</label>
+        <input type="text" name="title">   
+      </div>
+      
+      <div class="form-group">
+        <label class="pushtoright">Author: </label>
+        <input type="text" name="author">
+
+     </div>
+        <div class="form-group">
+                <label>completed: </label>
+                <select name="completed">
+                  <option value="YES">YES</option>
+                  <option value="NO">NO</option>
+                  <option value="READING">READING</option>
+                </select>
+        </div>
+
+        <div class="form-group">
+          <label class="pushtoright">Rating: </label>
+          <input type="text" name="rating">
+        </div>
+
+        <div class="form-group">
+          <label class="pushtoright">Genre:</label>
+          <input type="text" name="genre">
+        </div>
+
+        <% if (typeof user !== 'undefined') { %>
+            <button class="allbtn" type="submit" clas="btn">Submit</button>
+        <% } else { %>
+            <button class="allbtn" type="submit" disabled clas="btn">Login first</button>
+        <% } %>
+        <div class="link"><a href="/books">BACK</a></div> 
+    </form>
+
+    
+  </div>
+</div>
+  
+</div>
+</body>
+
+</html>
+
+
+

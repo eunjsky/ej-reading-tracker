@@ -1,0 +1,52 @@
+<%-include('../base/header')%>
+<body>
+    <div class="wholebox">
+    <div class="headertext">
+    <h4>My Library</h4>
+    </div>
+     
+    <table class="table">
+      <thead>
+        <tr> 
+          <th>Name of Book</th>
+          <th>Author</th>
+          <th>Completed reading</th>
+          <th>Detail</th>
+          <th>Delete</th>
+        </tr>
+      </thead>      
+ <tbody>
+    
+
+     <% books.forEach(function(b){ %>
+    <tr>
+       <td><%= b.title %></td>
+       <td><%= b.author %></td>
+       <td><%= b.completed %></td>
+       <!-- <td><%= b.rating %></td>
+       <td><%= b.genre %></td> -->
+       
+            
+       
+            <% if (typeof user !== 'undefined') { %>
+                <td><div class="link"><a href="/books/<%= b.id %>">Detail</a></div></td>
+                <td><form action="/books/delete/<%= b.id %>?_method=DELETE"
+                 class="delete-form" method="POST">
+                 <button class="allbtn" type="submit">Delete</button>
+               </form></td>
+            <% } else { %>
+                <td> <button class="allbtn" type="button" disabled> login first </button></td>
+                <td> <button class="allbtn" type="button" disabled> login first </button></td>
+            <% } %>
+       
+
+      
+    </tr>
+
+     <% }); %>
+
+ </tbody>
+ </table>
+    </div>
+</body>
+</html>

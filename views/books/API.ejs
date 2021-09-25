@@ -1,0 +1,48 @@
+<%-include('../base/header')%>
+  <body>
+    <div class="wholebox">
+    <h3>The New York Times Best Sellers</h3>
+    <div class="smallbox">
+    <div class="link">Combined Print & E-Book Fiction</div>
+    <div class="link">-</div>
+    <div class="link"><a href="https://www.nytimes.com/books/best-sellers/" target="_blank">NYT's Website</a></div> 
+        <div class="link"><a href="/books">Back to Home Page</a></div>
+        </div>
+     
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name of Book</th>
+          <th>Author</th>
+          <th>Description</th>
+          <th>ADD</th>
+        </tr>
+      </thead>      
+ <br>
+
+    <% bookData.forEach(function(bk){ %>
+      <tr>
+        <td><%= bk.rank %></td>
+         <td><%= bk.book_details[0].title %></td>
+         <td><%= bk.book_details[0].author %></td>
+         <td><%= bk.book_details[0].description %></td>
+         <td><form action="/books/apibooks/" method="post">
+         <input type ="hidden" name="title" value="<%= bk.book_details[0].title %>">
+         <input type ="hidden" name="author" value="<%= bk.book_details[0].author %>">
+         <input type ="hidden" name="description" value="<%= bk.book_details[0].description %>">
+
+        
+         <% if (typeof user !== 'undefined') { %> 
+         <button class="allbtn" type="submit">Add</button>
+      <% } else { %>
+          <button class="allbtn" type="submit" disabled clas="btn">Login first!</button>
+      <% } %>
+     
+        
+        </form></td>
+        </tr>
+    <% }) %>    
+      </div>
+  </body>
+</html>
