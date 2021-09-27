@@ -1,4 +1,4 @@
-# App Title: My Book Lounge (heroku: https://ej-reading-tracker.herokuapp.com/books)
+# App Title: My Book Lounge 
 
 - (former named)Book Tracker
 - This app is like a reading journal that you can store your reading record/or book information etc.
@@ -7,8 +7,10 @@
 - The New York Times bestseller provided that can be added to your future reading list.
 - You can also add other recommended books or books of similar genres.
 
-# Screenshot(s):
+ heroku: [click](https://ej-reading-tracker.herokuapp.com/books)
 
+# Screenshot(s):
+ 
 ![main page](img/mainpage.png)
 ![detail page](img/detail-book-info-add-review.png)
 ![edit book](img/edit-book-info.png)
