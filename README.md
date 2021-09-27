@@ -10,10 +10,10 @@ A README.md file with these sections:
 
 # Screenshot(s):
 
-![main page](reading-tracker/img/mainpage.png)
-![detail page](reading-tracker/img/detail-book-info-add-review.png)
-![edit book](reading-tracker/img/edit-book-info.png)
-![bestseller](reading-tracker/img/bestseller.png)
+![main page](img/mainpage.png)
+![detail page](img/detail-book-info-add-review.png)
+![edit book](img/edit-book-info.png)
+![bestseller](img/bestseller.png)
 
 # Technologies Used:
 
@@ -27,8 +27,8 @@ Node.js, Express, MongoDB, Google Oauth2, Bootstrap, API,HTML, CSS, JavaScript, 
 - As a user I want to read/add another books (recommended books)
 - As a user I want to add recommend books
 
-![wireframe](reading-tracker/img/wireframe.png)
-![ERD](reading-tracker/img/ERD.png)
+![wireframe](img/wireframe.png)
+![ERD](img/ERD.png)
 
 # Next Steps: Planned future enhancements
 
