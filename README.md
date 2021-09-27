@@ -22,10 +22,10 @@ Node.js, Express, MongoDB, Google Oauth2, Bootstrap, API,HTML, CSS, JavaScript, 
 # Getting Started:
 
 - As a user, add a book information
-- As a user I want to edit the book information
-- As a user I want to delete book information
-- As a user I want to read/add another books (recommended books)
-- As a user I want to add recommend books
+- As a user, I want to edit the book information
+- As a user, I want to delete book information
+- As a user, I want to read/add another books (recommended books)
+- As a user, I want to add recommend books
 
 ![wireframe](img/wireframe.png)
 ![ERD](img/ERD.png)
